@@ -1,0 +1,12 @@
+{
+  "name": "storage_access",
+  "version": "1.0.0",
+  "description": "Database wrapper for project storage queries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -L index.js"
+  },
+  "author": "Aviv Assayag",
+  "license": "ISC"
+}

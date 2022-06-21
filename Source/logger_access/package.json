@@ -1,0 +1,12 @@
+{
+  "name": "logger_access",
+  "version": "1.0.0",
+  "description": "writes logs of past queries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -L index.js"
+  },
+  "author": "Aviv Assayag",
+  "license": "ISC"
+}

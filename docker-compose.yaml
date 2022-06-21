@@ -1,0 +1,65 @@
+version: '3.7'
+
+services:
+  project_finder:
+    build: ./Source/project_finder
+    container_name: porject_finder_c
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./Source/project_finder:/usr/src/app
+      - ./app/node_modules
+
+  indexer:
+    build: ./Source/indexer
+    container_name: indexer_c
+    ports:
+      - '3001:3001'    
+    volumes:
+      - ./Source/indexer:/usr/src/app
+      - ./app/node_modules
+
+  user_handler:
+    build: ./Source/user_handler
+    container_name: user_handler_c
+    ports:
+      - '3002:3002'
+    volumes:
+      - ./Source/user_handler:/usr/src/app
+      - ./app/node_modules
+
+  project_handler:
+    build: ./Source/project_handler
+    container_name: project_handler_c
+    ports:
+      - '3003:3003'
+    volumes:
+      - ./Source/project_handler:/usr/src/app
+      - ./app/node_modules
+
+  storage_access:
+    build: ./Source/storage_access
+    container_name: storage_access_c
+    ports:
+      - '3004:3004'
+    volumes:
+      - ./Source/storage_access:/usr/src/app
+      - ./app/node_modules
+
+  logger_access:
+    build: ./Source/logger_access
+    container_name: logger_access_c
+    ports:
+      - '3005:3005'
+    volumes:
+      - ./Source/logger_access:/usr/src/app
+      - ./app/node_modules
+
+  history_cleaner:
+    build: ./Source/history_cleaner
+    container_name: history_cleaner_c
+    ports:
+      - '3006:3006'
+    volumes:
+      - ./Source/history_cleaner:/usr/src/app
+      - ./app/node_modules
