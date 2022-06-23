@@ -8,7 +8,7 @@ services:
       - '3000:3000'
     volumes:
       - ./Source/project_finder:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
 
   indexer:
     build: ./Source/indexer
@@ -17,7 +17,7 @@ services:
       - '3001:3001'    
     volumes:
       - ./Source/indexer:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
 
   user_handler:
     build: ./Source/user_handler
@@ -26,7 +26,7 @@ services:
       - '3002:3002'
     volumes:
       - ./Source/user_handler:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
 
   project_handler:
     build: ./Source/project_handler
@@ -35,7 +35,7 @@ services:
       - '3003:3003'
     volumes:
       - ./Source/project_handler:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
 
   storage_access:
     build: ./Source/storage_access
@@ -44,7 +44,7 @@ services:
       - '3004:3004'
     volumes:
       - ./Source/storage_access:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
 
   logger_access:
     build: ./Source/logger_access
@@ -53,7 +53,7 @@ services:
       - '3005:3005'
     volumes:
       - ./Source/logger_access:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
 
   history_cleaner:
     build: ./Source/history_cleaner
@@ -62,4 +62,4 @@ services:
       - '3006:3006'
     volumes:
       - ./Source/history_cleaner:/usr/src/app
-      - ./app/node_modules
+      - /app/node_modules
